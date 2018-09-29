@@ -35,15 +35,12 @@ public class MessageHolders {
 
     private static final short VIEW_TYPE_DATE_HEADER = 130;
     private static final short VIEW_TYPE_TEXT_MESSAGE = 131;
-    private static final short VIEW_TYPE_IMAGE_MESSAGE = 132;
 
     private Class<? extends ViewHolder<Date>> dateHeaderHolder;
     private int dateHeaderLayout;
 
     private HolderConfig<IMessage> incomingTextConfig;
     private HolderConfig<IMessage> outcomingTextConfig;
-    private HolderConfig<MessageContentType.Image> incomingImageConfig;
-    private HolderConfig<MessageContentType.Image> outcomingImageConfig;
 
     private List<ContentTypeConfig> customContentTypes = new ArrayList<>();
     private ContentChecker contentChecker;
@@ -54,17 +51,8 @@ public class MessageHolders {
 
         this.incomingTextConfig = new HolderConfig<>(DefaultIncomingTextMessageViewHolder.class, R.layout.item_incoming_text_message);
         this.outcomingTextConfig = new HolderConfig<>(DefaultOutcomingTextMessageViewHolder.class, R.layout.item_outcoming_text_message);
-        this.incomingImageConfig = new HolderConfig<>(DefaultIncomingImageMessageViewHolder.class, R.layout.item_incoming_image_message);
-        this.outcomingImageConfig = new HolderConfig<>(DefaultOutcomingImageMessageViewHolder.class, R.layout.item_outcoming_image_message);
     }
 
-    /**
-     * Sets both of custom view holder class and layout resource for incoming text message.
-     *
-     * @param holder holder class.
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextConfig(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             @LayoutRes int layout) {
@@ -73,14 +61,6 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets both of custom view holder class and layout resource for incoming text message.
-     *
-     * @param holder  holder class.
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextConfig(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             @LayoutRes int layout,
@@ -91,25 +71,12 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets custom view holder class for incoming text message.
-     *
-     * @param holder holder class.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextHolder(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder) {
         this.incomingTextConfig.holder = holder;
         return this;
     }
 
-    /**
-     * Sets custom view holder class for incoming text message.
-     *
-     * @param holder  holder class.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextHolder(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             Object payload) {
@@ -118,37 +85,17 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets custom layout resource for incoming text message.
-     *
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextLayout(@LayoutRes int layout) {
         this.incomingTextConfig.layout = layout;
         return this;
     }
 
-    /**
-     * Sets custom layout resource for incoming text message.
-     *
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setIncomingTextLayout(@LayoutRes int layout, Object payload) {
         this.incomingTextConfig.layout = layout;
         this.incomingTextConfig.payload = payload;
         return this;
     }
 
-    /**
-     * Sets both of custom view holder class and layout resource for outcoming text message.
-     *
-     * @param holder holder class.
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setOutcomingTextConfig(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             @LayoutRes int layout) {
@@ -157,14 +104,6 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets both of custom view holder class and layout resource for outcoming text message.
-     *
-     * @param holder  holder class.
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setOutcomingTextConfig(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             @LayoutRes int layout,
@@ -175,25 +114,13 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets custom view holder class for outcoming text message.
-     *
-     * @param holder holder class.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
+
     public MessageHolders setOutcomingTextHolder(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder) {
         this.outcomingTextConfig.holder = holder;
         return this;
     }
 
-    /**
-     * Sets custom view holder class for outcoming text message.
-     *
-     * @param holder  holder class.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setOutcomingTextHolder(
             @NonNull Class<? extends BaseMessageViewHolder<? extends IMessage>> holder,
             Object payload) {
@@ -202,205 +129,17 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets custom layout resource for outcoming text message.
-     *
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setOutcomingTextLayout(@LayoutRes int layout) {
         this.outcomingTextConfig.layout = layout;
         return this;
     }
 
-    /**
-     * Sets custom layout resource for outcoming text message.
-     *
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setOutcomingTextLayout(@LayoutRes int layout, Object payload) {
         this.outcomingTextConfig.layout = layout;
         this.outcomingTextConfig.payload = payload;
         return this;
     }
 
-    /**
-     * Sets both of custom view holder class and layout resource for incoming image message.
-     *
-     * @param holder holder class.
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageConfig(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            @LayoutRes int layout) {
-        this.incomingImageConfig.holder = holder;
-        this.incomingImageConfig.layout = layout;
-        return this;
-    }
-
-    /**
-     * Sets both of custom view holder class and layout resource for incoming image message.
-     *
-     * @param holder  holder class.
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageConfig(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            @LayoutRes int layout,
-            Object payload) {
-        this.incomingImageConfig.holder = holder;
-        this.incomingImageConfig.layout = layout;
-        this.incomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets custom view holder class for incoming image message.
-     *
-     * @param holder holder class.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageHolder(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder) {
-        this.incomingImageConfig.holder = holder;
-        return this;
-    }
-
-    /**
-     * Sets custom view holder class for incoming image message.
-     *
-     * @param holder  holder class.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageHolder(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            Object payload) {
-        this.incomingImageConfig.holder = holder;
-        this.incomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets custom layout resource for incoming image message.
-     *
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageLayout(@LayoutRes int layout) {
-        this.incomingImageConfig.layout = layout;
-        return this;
-    }
-
-    /**
-     * Sets custom layout resource for incoming image message.
-     *
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setIncomingImageLayout(@LayoutRes int layout, Object payload) {
-        this.incomingImageConfig.layout = layout;
-        this.incomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets both of custom view holder class and layout resource for outcoming image message.
-     *
-     * @param holder holder class.
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageConfig(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            @LayoutRes int layout) {
-        this.outcomingImageConfig.holder = holder;
-        this.outcomingImageConfig.layout = layout;
-        return this;
-    }
-
-    /**
-     * Sets both of custom view holder class and layout resource for outcoming image message.
-     *
-     * @param holder  holder class.
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageConfig(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            @LayoutRes int layout,
-            Object payload) {
-        this.outcomingImageConfig.holder = holder;
-        this.outcomingImageConfig.layout = layout;
-        this.outcomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets custom view holder class for outcoming image message.
-     *
-     * @param holder holder class.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageHolder(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder) {
-        this.outcomingImageConfig.holder = holder;
-        return this;
-    }
-
-    /**
-     * Sets custom view holder class for outcoming image message.
-     *
-     * @param holder  holder class.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageHolder(
-            @NonNull Class<? extends BaseMessageViewHolder<? extends MessageContentType.Image>> holder,
-            Object payload) {
-        this.outcomingImageConfig.holder = holder;
-        this.outcomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets custom layout resource for outcoming image message.
-     *
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageLayout(@LayoutRes int layout) {
-        this.outcomingImageConfig.layout = layout;
-        return this;
-    }
-
-    /**
-     * Sets custom layout resource for outcoming image message.
-     *
-     * @param layout  layout resource.
-     * @param payload custom data.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
-    public MessageHolders setOutcomingImageLayout(@LayoutRes int layout, Object payload) {
-        this.outcomingImageConfig.layout = layout;
-        this.outcomingImageConfig.payload = payload;
-        return this;
-    }
-
-    /**
-     * Sets both of custom view holder class and layout resource for date header.
-     *
-     * @param holder holder class.
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setDateHeaderConfig(
             @NonNull Class<? extends ViewHolder<Date>> holder,
             @LayoutRes int layout) {
@@ -409,38 +148,15 @@ public class MessageHolders {
         return this;
     }
 
-    /**
-     * Sets custom view holder class for date header.
-     *
-     * @param holder holder class.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setDateHeaderHolder(@NonNull Class<? extends ViewHolder<Date>> holder) {
         this.dateHeaderHolder = holder;
         return this;
     }
-
-    /**
-     * Sets custom layout reource for date header.
-     *
-     * @param layout layout resource.
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public MessageHolders setDateHeaderLayout(@LayoutRes int layout) {
         this.dateHeaderLayout = layout;
         return this;
     }
 
-    /**
-     * Registers custom content type (e.g. multimedia, events etc.)
-     *
-     * @param type            unique id for content type
-     * @param holder          holder class for incoming and outcoming messages
-     * @param incomingLayout  layout resource for incoming message
-     * @param outcomingLayout layout resource for outcoming message
-     * @param contentChecker  {@link ContentChecker} for registered type
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public <TYPE extends MessageContentType>
     MessageHolders registerContentType(
             byte type, @NonNull Class<? extends BaseMessageViewHolder<TYPE>> holder,
@@ -454,17 +170,6 @@ public class MessageHolders {
                 contentChecker);
     }
 
-    /**
-     * Registers custom content type (e.g. multimedia, events etc.)
-     *
-     * @param type            unique id for content type
-     * @param incomingHolder  holder class for incoming message
-     * @param outcomingHolder holder class for outcoming message
-     * @param incomingLayout  layout resource for incoming message
-     * @param outcomingLayout layout resource for outcoming message
-     * @param contentChecker  {@link ContentChecker} for registered type
-     * @return {@link MessageHolders} for subsequent configuration.
-     */
     public <TYPE extends MessageContentType>
     MessageHolders registerContentType(
             byte type,
@@ -514,10 +219,6 @@ public class MessageHolders {
                 return getHolder(parent, incomingTextConfig, messagesListStyle);
             case -VIEW_TYPE_TEXT_MESSAGE:
                 return getHolder(parent, outcomingTextConfig, messagesListStyle);
-            case VIEW_TYPE_IMAGE_MESSAGE:
-                return getHolder(parent, incomingImageConfig, messagesListStyle);
-            case -VIEW_TYPE_IMAGE_MESSAGE:
-                return getHolder(parent, outcomingImageConfig, messagesListStyle);
             default:
                 for (ContentTypeConfig typeConfig : customContentTypes) {
                     if (Math.abs(typeConfig.type) == Math.abs(viewType)) {
@@ -614,7 +315,7 @@ public class MessageHolders {
     private short getContentViewType(IMessage message) {
         if (message instanceof MessageContentType.Image
                 && ((MessageContentType.Image) message).getImageUrl() != null) {
-            return VIEW_TYPE_IMAGE_MESSAGE;
+            return 0;
         }
 
         // other default types will be here
