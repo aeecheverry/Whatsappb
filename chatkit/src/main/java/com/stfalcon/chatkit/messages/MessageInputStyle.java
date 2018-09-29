@@ -37,7 +37,7 @@ class MessageInputStyle extends Style {
     private static final int DEFAULT_MAX_LINES = 5;
     private static final int DEFAULT_DELAY_TYPING_STATUS = 1500;
 
-    private boolean showAttachmentButton;
+    /*private boolean showAttachmentButton;
 
     private int attachmentButtonBackground;
     private int attachmentButtonDefaultBgColor;
@@ -51,7 +51,7 @@ class MessageInputStyle extends Style {
 
     private int attachmentButtonWidth;
     private int attachmentButtonHeight;
-    private int attachmentButtonMargin;
+    private int attachmentButtonMargin;*/
 
     private int inputButtonBackground;
     private int inputButtonDefaultBgColor;
@@ -89,7 +89,7 @@ class MessageInputStyle extends Style {
         MessageInputStyle style = new MessageInputStyle(context, attrs);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MessageInput);
 
-        style.showAttachmentButton = typedArray.getBoolean(R.styleable.MessageInput_showAttachmentButton, false);
+        /*style.showAttachmentButton = typedArray.getBoolean(R.styleable.MessageInput_showAttachmentButton, false);
 
         style.attachmentButtonBackground = typedArray.getResourceId(R.styleable.MessageInput_attachmentButtonBackground, -1);
         style.attachmentButtonDefaultBgColor = typedArray.getColor(R.styleable.MessageInput_attachmentButtonDefaultBgColor,
@@ -109,7 +109,7 @@ class MessageInputStyle extends Style {
 
         style.attachmentButtonWidth = typedArray.getDimensionPixelSize(R.styleable.MessageInput_attachmentButtonWidth, style.getDimension(R.dimen.input_button_width));
         style.attachmentButtonHeight = typedArray.getDimensionPixelSize(R.styleable.MessageInput_attachmentButtonHeight, style.getDimension(R.dimen.input_button_height));
-        style.attachmentButtonMargin = typedArray.getDimensionPixelSize(R.styleable.MessageInput_attachmentButtonMargin, style.getDimension(R.dimen.input_button_margin));
+        style.attachmentButtonMargin = typedArray.getDimensionPixelSize(R.styleable.MessageInput_attachmentButtonMargin, style.getDimension(R.dimen.input_button_margin));*/
 
         style.inputButtonBackground = typedArray.getResourceId(R.styleable.MessageInput_inputButtonBackground, -1);
         style.inputButtonDefaultBgColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultBgColor,
@@ -121,9 +121,9 @@ class MessageInputStyle extends Style {
 
         style.inputButtonIcon = typedArray.getResourceId(R.styleable.MessageInput_inputButtonIcon, -1);
         style.inputButtonDefaultIconColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconColor,
-                style.getColor(R.color.white));
+                style.getColor(R.color.cornflower_blue_two));
         style.inputButtonDefaultIconPressedColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconPressedColor,
-                style.getColor(R.color.white));
+                style.getColor(R.color.cornflower_blue_two_dark));
         style.inputButtonDefaultIconDisabledColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconDisabledColor,
                 style.getColor(R.color.warm_grey));
 
@@ -175,7 +175,7 @@ class MessageInputStyle extends Style {
         return drawable;
     }
 
-    protected boolean showAttachmentButton() {
+    /*protected boolean showAttachmentButton() {
         return showAttachmentButton;
     }
 
@@ -196,8 +196,8 @@ class MessageInputStyle extends Style {
             return getDrawable(attachmentButtonIcon);
         }
     }
-
-    protected int getAttachmentButtonWidth() {
+*/
+    /*protected int getAttachmentButtonWidth() {
         return attachmentButtonWidth;
     }
 
@@ -207,7 +207,7 @@ class MessageInputStyle extends Style {
 
     protected int getAttachmentButtonMargin() {
         return attachmentButtonMargin;
-    }
+    }*/
 
     protected Drawable getInputButtonBackground() {
         if (inputButtonBackground == -1) {
@@ -221,7 +221,7 @@ class MessageInputStyle extends Style {
     protected Drawable getInputButtonIcon() {
         if (inputButtonIcon == -1) {
             return getSelector(inputButtonDefaultIconColor, inputButtonDefaultIconPressedColor,
-                    inputButtonDefaultIconDisabledColor, R.drawable.ic_send);
+                    inputButtonDefaultIconDisabledColor, R.drawable.ic_menu_send);
         } else {
             return getDrawable(inputButtonIcon);
         }

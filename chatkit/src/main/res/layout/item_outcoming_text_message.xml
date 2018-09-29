@@ -9,7 +9,7 @@
     android:layout_marginTop="8dp">
 
     <com.google.android.flexbox.FlexboxLayout
-        android:id="@id/bubble"
+        android:id="@+id/bubble"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -22,13 +22,13 @@
         app:justifyContent="flex_end">
 
         <TextView
-            android:id="@id/messageText"
+            android:id="@+id/messageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignWithParentIfMissing="true"/>
 
         <TextView
-            android:id="@id/messageTime"
+            android:id="@+id/messageTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/messageText"

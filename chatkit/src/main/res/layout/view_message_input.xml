@@ -5,18 +5,18 @@
     android:orientation="horizontal">
 
     <EditText
-        android:id="@id/messageInput"
+        android:id="@+id/messageInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:inputType="textAutoCorrect|textAutoComplete|textMultiLine|textCapSentences"/>
 
     <ImageButton
-        android:id="@id/messageSendButton"
+        android:id="@+id/messageSendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"/>
-
 </merge>

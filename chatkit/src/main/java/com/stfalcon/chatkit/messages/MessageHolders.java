@@ -695,7 +695,7 @@ public class MessageHolders {
             extends BaseMessageViewHolder<MESSAGE> implements DefaultMessageViewHolder {
 
         protected TextView time;
-        protected ImageView userAvatar;
+        //protected ImageView userAvatar;
 
         @Deprecated
         public BaseIncomingMessageViewHolder(View itemView) {
@@ -714,7 +714,7 @@ public class MessageHolders {
                 time.setText(DateFormatter.format(message.getCreatedAt(), DateFormatter.Template.TIME));
             }
 
-            if (userAvatar != null) {
+            /*if (userAvatar != null) {
                 boolean isAvatarExists = imageLoader != null
                         && message.getUser().getAvatar() != null
                         && !message.getUser().getAvatar().isEmpty();
@@ -723,7 +723,7 @@ public class MessageHolders {
                 if (isAvatarExists) {
                     imageLoader.loadImage(userAvatar, message.getUser().getAvatar());
                 }
-            }
+            }*/
         }
 
         @Override
@@ -734,16 +734,16 @@ public class MessageHolders {
                 time.setTypeface(time.getTypeface(), style.getIncomingTimeTextStyle());
             }
 
-            if (userAvatar != null) {
+            /*if (userAvatar != null) {
                 userAvatar.getLayoutParams().width = style.getIncomingAvatarWidth();
                 userAvatar.getLayoutParams().height = style.getIncomingAvatarHeight();
-            }
+            }*/
 
         }
 
         private void init(View itemView) {
             time = (TextView) itemView.findViewById(R.id.messageTime);
-            userAvatar = (ImageView) itemView.findViewById(R.id.messageUserAvatar);
+            //userAvatar = (ImageView) itemView.findViewById(R.id.messageUserAvatar);
         }
     }
 
