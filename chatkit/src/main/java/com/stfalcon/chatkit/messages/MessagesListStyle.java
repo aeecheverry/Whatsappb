@@ -158,11 +158,11 @@ class MessagesListStyle extends Style {
 
         style.outcomingBubbleDrawable = typedArray.getResourceId(R.styleable.MessagesList_outcomingBubbleDrawable, -1);
         style.outcomingDefaultBubbleColor = typedArray.getColor(R.styleable.MessagesList_outcomingDefaultBubbleColor,
-                style.getColor(R.color.cornflower_blue_two));
+                style.getColor(R.color.text_send));
         style.outcomingDefaultBubblePressedColor = typedArray.getColor(R.styleable.MessagesList_outcomingDefaultBubblePressedColor,
-                style.getColor(R.color.cornflower_blue_two));
+                style.getColor(R.color.text_send));
         style.outcomingDefaultBubbleSelectedColor = typedArray.getColor(R.styleable.MessagesList_outcomingDefaultBubbleSelectedColor,
-                style.getColor(R.color.cornflower_blue_two_24));
+                style.getColor(R.color.dark_mint));
 
         style.outcomingImageOverlayDrawable = typedArray.getResourceId(R.styleable.MessagesList_outcomingImageOverlayDrawable, -1);
         style.outcomingDefaultImageOverlayPressedColor = typedArray.getColor(R.styleable.MessagesList_outcomingDefaultImageOverlayPressedColor,
@@ -179,13 +179,13 @@ class MessagesListStyle extends Style {
         style.outcomingDefaultBubblePaddingBottom = typedArray.getDimensionPixelSize(R.styleable.MessagesList_outcomingBubblePaddingBottom,
                 style.getDimension(R.dimen.message_padding_bottom));
         style.outcomingTextColor = typedArray.getColor(R.styleable.MessagesList_outcomingTextColor,
-                style.getColor(R.color.white));
+                style.getColor(R.color.dark_grey_two));
         style.outcomingTextSize = typedArray.getDimensionPixelSize(R.styleable.MessagesList_outcomingTextSize,
                 style.getDimension(R.dimen.message_text_size));
         style.outcomingTextStyle = typedArray.getInt(R.styleable.MessagesList_outcomingTextStyle, Typeface.NORMAL);
 
         style.outcomingTimeTextColor = typedArray.getColor(R.styleable.MessagesList_outcomingTimeTextColor,
-                style.getColor(R.color.white60));
+                style.getColor(R.color.warm_grey_four));
         style.outcomingTimeTextSize = typedArray.getDimensionPixelSize(R.styleable.MessagesList_outcomingTimeTextSize,
                 style.getDimension(R.dimen.message_time_text_size));
         style.outcomingTimeTextStyle = typedArray.getInt(R.styleable.MessagesList_outcomingTimeTextStyle, Typeface.NORMAL);

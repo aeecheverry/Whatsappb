@@ -13,42 +13,42 @@ abstract class FixturesData {
 
     static ArrayList<String> avatars = new ArrayList<String>() {
         {
-            add("http://i.imgur.com/pv1tBmT.png");
-            add("http://i.imgur.com/R3Jm1CL.png");
-            add("http://i.imgur.com/ROz4Jgh.png");
-            add("http://i.imgur.com/Qn9UesZ.png");
+            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
+            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
+            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
+            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
         }
     };
 
     static final ArrayList<String> names = new ArrayList<String>() {
         {
-            add("Samuel Reynolds");
-            add("Kyle Hardman");
-            add("Zoe Milton");
-            add("Angel Ogden");
-            add("Zoe Milton");
-            add("Angelina Mackenzie");
-            add("Kyle Oswald");
-            add("Abigail Stevenson");
-            add("Julia Goldman");
-            add("Jordan Gill");
-            add("Michelle Macey");
+            add("Andrés Echeverry");
+            add("Daniel Bielos");
+            add("Rafael Rueda");
+            add("Andrés Rueda");
+            add("Luis Garcia");
+            add("Elvis Pressley");
+            add("Elvis");
+            add("Jonathan David");
+            add("Johan");
+            add("Jordan");
+            add("Jordy ELN");
         }
     };
 
     static final ArrayList<String> messages = new ArrayList<String>() {
         {
-            add("Hello!");
-            add("This is my phone number - +1 (234) 567-89-01");
-            add("Here is my e-mail - myemail@example.com");
-            add("Hey! Check out this awesome link! www.github.com");
-            add("Hello! No problem. I can today at 2 pm. And after we can go to the office.");
-            add("At first, for some time, I was not able to answer him one word");
-            add("At length one of them called out in a clear, polite, smooth dialect, not unlike in sound to the Italian");
-            add("By the bye, Bob, said Hopkins");
-            add("He made his passenger captain of one, with four of the men; and himself, his mate, and five more, went in the other; and they contrived their business very well, for they came up to the ship about midnight.");
-            add("So saying he unbuckled his baldric with the bugle");
-            add("Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.");
+            add("Hola");
+            add("Como estás");
+            add("Este es el mejor chat del mundo");
+            add("Si seño open open open open sssssssssssssssssssssss");
+            add("No hay problema te lo tengo listo para mañana");
+            add("Entre mas largo sea el mensaje mejor brothe chcate esta");
+            add("Información inportante ojo con editarme me refiero a fixture data soy sensible y deben tener cuidado o hago explotar todo");
+            add("By by");
+            add("Singula me dicen");
+            add("El avatar pro master incomming winter");
+            add("Jajajaja");
         }
     };
 

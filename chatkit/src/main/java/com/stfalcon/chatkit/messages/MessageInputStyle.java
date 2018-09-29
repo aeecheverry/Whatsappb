@@ -121,11 +121,11 @@ class MessageInputStyle extends Style {
 
         style.inputButtonIcon = typedArray.getResourceId(R.styleable.MessageInput_inputButtonIcon, -1);
         style.inputButtonDefaultIconColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconColor,
-                style.getColor(R.color.cornflower_blue_two));
+                style.getColor(R.color.send_green));
         style.inputButtonDefaultIconPressedColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconPressedColor,
-                style.getColor(R.color.cornflower_blue_two_dark));
+                style.getColor(R.color.dark_green));
         style.inputButtonDefaultIconDisabledColor = typedArray.getColor(R.styleable.MessageInput_inputButtonDefaultIconDisabledColor,
-                style.getColor(R.color.warm_grey));
+                style.getColor(R.color.send_green));
 
         style.inputButtonWidth = typedArray.getDimensionPixelSize(R.styleable.MessageInput_inputButtonWidth, style.getDimension(R.dimen.input_button_width));
         style.inputButtonHeight = typedArray.getDimensionPixelSize(R.styleable.MessageInput_inputButtonHeight, style.getDimension(R.dimen.input_button_height));
