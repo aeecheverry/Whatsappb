@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.stfalcon.chatkit.dialogs.DialogsList;
 import com.stfalcon.chatkit.dialogs.DialogsListAdapter;
 import com.stfalcon.chatkit.sample.R;
@@ -11,16 +12,13 @@ import com.stfalcon.chatkit.sample.common.data.fixtures.DialogsFixtures;
 import com.stfalcon.chatkit.sample.common.data.model.Dialog;
 import com.stfalcon.chatkit.sample.common.data.model.Message;
 import com.stfalcon.chatkit.sample.features.demo.DemoDialogsActivity;
+import com.stfalcon.chatkit.sample.features.main.LoginActivity;
 
 import java.util.ArrayList;
 
 public class DefaultDialogsActivity extends DemoDialogsActivity {
 
     private ArrayList<Dialog> dialogs;
-
-    public static void open(Context context) {
-        context.startActivity(new Intent(context, DefaultDialogsActivity.class));
-    }
 
     private DialogsList dialogsList;
 
@@ -31,6 +29,19 @@ public class DefaultDialogsActivity extends DemoDialogsActivity {
 
         dialogsList = (DialogsList) findViewById(R.id.dialogsList);
         initAdapter();
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        FirebaseAuth.getInstance().signOut();
+        Intent startIntent = new Intent( DefaultDialogsActivity.this,LoginActivity.class);
+        startActivity(startIntent);
     }
 
     @Override

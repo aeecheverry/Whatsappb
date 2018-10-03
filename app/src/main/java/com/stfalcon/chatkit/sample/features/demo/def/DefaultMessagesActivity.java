@@ -49,8 +49,8 @@ public class DefaultMessagesActivity extends DemoMessagesActivity
 
     @Override
     public void onAddAttachments() {
-        super.messagesAdapter.addToStart(
-                MessagesFixtures.getImageMessage(), true);
+        //super.messagesAdapter.addToStart(
+                //MessagesFixtures.getImageMessage(), true);
     }
 
     private void initAdapter() {

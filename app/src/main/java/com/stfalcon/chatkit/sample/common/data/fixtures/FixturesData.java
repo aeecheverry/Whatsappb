@@ -14,9 +14,6 @@ abstract class FixturesData {
     static ArrayList<String> avatars = new ArrayList<String>() {
         {
             add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
-            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
-            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
-            add("https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png");
         }
     };
 
@@ -57,7 +54,7 @@ abstract class FixturesData {
     }
 
     static String getRandomAvatar() {
-        return avatars.get(rnd.nextInt(avatars.size()));
+        return avatars.get(0);
     }
 
     static String getRandomName() {
