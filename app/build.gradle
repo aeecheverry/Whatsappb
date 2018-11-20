@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.stfalcon.chatkit.sample"
         minSdkVersion 14
@@ -33,31 +33,25 @@ ext {
 
 dependencies {
     implementation project(':chatkit')
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'junit:junit:4.12'
-
     implementation "com.android.support:appcompat-v7:$supportVersion"
     implementation "com.android.support:cardview-v7:$supportVersion"
     implementation "com.android.support:design:$supportVersion"
-
     //Picasso
     implementation "com.squareup.picasso:picasso:$picassoVersion"
-
     //ImageViews
     implementation "de.hdodenhof:circleimageview:$circleImageViewVersion"
     implementation "com.github.siyamed:android-shape-imageview:$shapeImageViewVersion"
-
     //Utils
     implementation "me.relex:circleindicator:$circleindicatorVersion"
-
     //firebase
-    implementation "com.google.firebase:firebase-core:16.0.1"
-    implementation "com.google.firebase:firebase-database:16.0.1"
-    implementation "com.google.firebase:firebase-auth:16.0.1"
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
